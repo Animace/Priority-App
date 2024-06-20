@@ -1,46 +1,77 @@
-# Getting Started with Create React App and Redux
+# PrioritySetter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+PrioritySetter is a full-stack MERN (MongoDB, Express, React, Node.js) application for managing priorities or tasks. It allows users to add, edit, and delete priorities, providing a seamless user experience.
 
-## Available Scripts
+# Technologies Used
+# Backend
+Node.js and Express: Server-side framework and runtime environment
+MongoDB and Mongoose: Database and ODM (Object Data Modeling)
+bcryptjs: Password hashing for enhanced security
+jsonwebtoken: JSON Web Token (JWT) authentication
+dotenv: Environment variable management
+express-async-handler: Middleware to handle asynchronous functions
+# Frontend
+React: Frontend framework for building user interfaces
+React Router DOM: Routing library for React
+Redux Toolkit and React-Redux: State management tools for React applications
+axios: HTTP client for making API requests
+react-icons: Icons for React applications
+react-toastify: Notification library for React
+react-scripts: Scripts and tools for React apps (used for build, start, test, etc.)
+Web Vitals: Tooling for measuring Core Web Vitals metrics
+# Features
+Authentication: Secure user authentication using JWT tokens.
+CRUD Operations: Create, Read, Update, and Delete priorities.
+Responsive Design: Supports desktop and mobile devices.
+Error Handling: Comprehensive error handling for better user experience.
+Testing: Includes unit and integration tests using Jest and React Testing Library.
+Getting Started
+# Prerequisites
+Node.js and npm installed on your machine
+MongoDB Atlas account or local MongoDB server
+# Installation
+Clone the repository: 
+git clone https://github.com/Animace/PrioritySetter.git
+cd PrioritySetter
+Install dependencies:
 
-In the project directory, you can run:
+bash
+Copy code
+# Install backend dependencies
+npm install
 
-### `npm start`
+# Install frontend dependencies
+cd client
+npm install
+cd ..
+Set up environment variables:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Create a .env file in the root directory with the following variables:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+makefile
+Copy code
+NODE_ENV=development
+PORT=
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+Usage
+Start the backend server:
 
-### `npm test`
+bash
+Copy code
+npm run dev
+This command will concurrently start the backend server (using nodemon for hot-reloading) and the React frontend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open your browser and navigate to http://localhost:#### to use the application.
 
-### `npm run build`
+Contributing
+Contributions are welcome! Fork the repository and submit a pull request for any enhancements or bug fixes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+License
+This project is licensed under the ISC License - see the LICENSE file for details.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Acknowledgments
+MongoDB
+Express
+React
+Node.js

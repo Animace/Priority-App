@@ -1,7 +1,7 @@
 {
   "name": "mern-stack",
   "version": "1.0.0",
-  "description": "Goalsetter",
+  "description": "Priority App",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",

@@ -6,30 +6,37 @@ import GoalItem from '../components/GoalItem';
 import Spinner from '../components/Spinner';
 import { getGoals, reset } from '../features/goals/goalSlice';
 
-function Dashboard() {
+function Dashboard()
+{
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const { user } = useSelector((state) => state.auth);
   const { goals, isLoading, isError, message } = useSelector((state) => state.goals);
 
-  useEffect(() => {
-    if (isError) {
+  useEffect(() =>
+  {
+    if (isError)
+    {
       console.log(message);
     }
 
-    if (!user) {
+    if (!user)
+    {
       navigate('/login');
-    } else {
+    } else
+    {
       dispatch(getGoals());
     }
 
-    return () => {
+    return () =>
+    {
       dispatch(reset());
     };
   }, [user, navigate, isError, message, dispatch]);
 
-  if (isLoading) {
+  if (isLoading)
+  {
     return <Spinner />;
   }
 
@@ -37,7 +44,7 @@ function Dashboard() {
     <>
       <section className="heading">
         <h1>Welcome {user && user.name}</h1>
-        <p>To The Dashboard</p>
+        <p>To your dashboard</p>
       </section>
 
       <GoalForm />
@@ -50,7 +57,7 @@ function Dashboard() {
             ))}
           </div>
         ) : (
-          <h3>You have not set any goals</h3>
+          <h3>You have not set any Priority</h3>
         )}
       </section>
     </>
